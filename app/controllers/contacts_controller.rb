@@ -4,6 +4,7 @@ class ContactsController < ApplicationController
   end
   
   def create
+    require 'pry'; binding.pry
     @contact = Contact.new(contact_params)
     if @contact.save
       redirect_to new_contact_path
